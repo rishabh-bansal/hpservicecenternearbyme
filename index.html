@@ -1,0 +1,658 @@
+<!-- Save this as index.html in your repository -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HP Service Center - Laptop, Computer & Printer Repair | Dilshad Garden</title>
+    <meta name="description" content="Expert HP Service Center in Dilshad Garden. Multi-brand laptop repair, computer service, printer repair, MacBook service, out-of-warranty support. Free diagnosis. Same day repair.">
+    <meta name="keywords" content="HP service center, laptop repair, computer repair, printer repair, MacBook service, Dell repair, Lenovo repair, out-of-warranty repair, virus removal, screen replacement, motherboard repair, data recovery, computer service near me, laptop repair near me">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #0056b3 0%, #003d82 100%);
+            color: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo i {
+            margin-right: 10px;
+            font-size: 2rem;
+        }
+        
+        .contact-info {
+            text-align: right;
+        }
+        
+        .phone {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .address {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        /* Navigation */
+        nav {
+            background-color: #003366;
+            padding: 12px 0;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links li {
+            margin: 0 15px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 5px 0;
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            color: #4dabf7;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #4dabf7;
+            transition: width 0.3s;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.9)), url('https://images.unsplash.com/photo-1562408590-e32931084e23?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #ff6b00;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .btn:hover {
+            background: #e55c00;
+        }
+        
+        /* Services Section */
+        .section-title {
+            text-align: center;
+            margin: 50px 0 30px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 2rem;
+            color: #003366;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background: #ff6b00;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .service-icon {
+            background: #003366;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 2.5rem;
+        }
+        
+        .service-content {
+            padding: 25px;
+        }
+        
+        .service-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #003366;
+        }
+        
+        .service-content ul {
+            list-style: none;
+        }
+        
+        .service-content li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .service-content li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-weight: bold;
+        }
+        
+        /* Brands Section */
+        .brands {
+            background: #f1f5f9;
+            padding: 50px 0;
+        }
+        
+        .brands-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .brand-item {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        
+        .brand-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .brand-item img {
+            max-width: 100%;
+            height: 60px;
+            object-fit: contain;
+        }
+        
+        /* Service Areas */
+        .areas {
+            padding: 50px 0;
+        }
+        
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .area-item {
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            border-left: 4px solid #003366;
+        }
+        
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(135deg, #003366 0%, #0056b3 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .cta h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        /* Footer */
+        footer {
+            background: #002244;
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 2px;
+            background: #ff6b00;
+            bottom: 0;
+            left: 0;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column a:hover {
+            color: #4dabf7;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .logo {
+                margin-bottom: 15px;
+            }
+            
+            .contact-info {
+                text-align: center;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .nav-links li {
+                margin: 5px 0;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-laptop-medical"></i>
+                    <span>HP Service Center - Dilshad Garden</span>
+                </div>
+                <div class="contact-info">
+                    <div class="phone"><i class="fas fa-phone"></i> 9311551855</div>
+                    <div class="address"><i class="fas fa-map-marker-alt"></i> 358A, Pocket J & K, Dilshad Garden, Delhi, 110095</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#brands">Brands We Repair</a></li>
+                <li><a href="#areas">Service Areas</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Expert Laptop, Computer & Printer Repair Service in Dilshad Garden</h1>
+            <p>Your trusted multi-brand laptop and printer service center specializing in out-of-warranty repairs for all major brands including HP, Dell, Apple MacBook, Lenovo, and more. Free diagnosis and same-day service available.</p>
+            <a href="tel:9311551855" class="btn"><i class="fas fa-phone"></i> Call Now for Free Diagnosis</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Computer Repair Services</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Laptop Repair Services</h3>
+                        <ul>
+                            <li>Laptop screen replacement and repair</li>
+                            <li>Laptop motherboard repair service</li>
+                            <li>Laptop keyboard repair and replacement</li>
+                            <li>Laptop battery replacement service</li>
+                            <li>Laptop charging port repair</li>
+                            <li>Laptop hinge repair service</li>
+                            <li>Laptop liquid damage repair</li>
+                            <li>Laptop overheating issue fixing</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Computer Repair Services</h3>
+                        <ul>
+                            <li>Desktop computer repair and service</li>
+                            <li>Computer hardware troubleshooting</li>
+                            <li>CPU repair and maintenance</li>
+                            <li>RAM upgrade and replacement</li>
+                            <li>Hard disk repair and replacement</li>
+                            <li>SSD installation service</li>
+                            <li>Power supply unit repair</li>
+                            <li>Motherboard repair service</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-print"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Printer Repair Services</h3>
+                        <ul>
+                            <li>HP printer repair and service</li>
+                            <li>Printer paper jam fixing</li>
+                            <li>Printer cartridge error repair</li>
+                            <li>Printer connectivity issues</li>
+                            <li>Inkjet printer repair service</li>
+                            <li>Laser printer repair service</li>
+                            <li>Printer driver installation</li>
+                            <li>Printer maintenance service</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Software & Data Services</h3>
+                        <ul>
+                            <li>Virus removal and antivirus installation</li>
+                            <li>Windows installation and activation</li>
+                            <li>Software installation service</li>
+                            <li>Data recovery from hard drive</li>
+                            <li>Operating system repair</li>
+                            <li>PC optimization and speed up</li>
+                            <li>Internet connectivity setup</li>
+                            <li>Data backup service</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands Section -->
+    <section class="brands" id="brands">
+        <div class="container">
+            <div class="section-title">
+                <h2>Brands We Repair</h2>
+            </div>
+            <div class="brands-grid">
+                <div class="brand-item">
+                    <i class="fab fa-apple" style="font-size: 3rem; color: #333;"></i>
+                    <p>Apple MacBook</p>
+                </div>
+                <div class="brand-item">
+                    <i class="fas fa-laptop" style="font-size: 3rem; color: #0096D6;"></i>
+                    <p>HP Laptops</p>
+                </div>
+                <div class="brand-item">
+                    <i class="fas fa-laptop" style="font-size: 3rem; color: #007DB8;"></i>
+                    <p>Dell Computers</p>
+                </div>
+                <div class="brand-item">
+                    <i class="fas fa-laptop" style="font-size: 3rem; color: #E2231A;"></i>
+                    <p>Lenovo Laptops</p>
+                </div>
+                <div class="brand-item">
+                    <i class="fas fa-laptop" style="font-size: 3rem; color: #83B81A;"></i>
+                    <p>Acer Computers</p>
+                </div>
+                <div class="brand-item">
+                    <i class="fas fa-laptop" style="font-size: 3rem; color: #003366;"></i>
+                    <p>Asus Laptops</p>
+                </div>
+                <div class="brand-item">
+                    <i class="fas fa-laptop" style="font-size: 3rem; color: #FF0000;"></i>
+                    <p>MSI Gaming</p>
+                </div>
+                <div class="brand-item">
+                    <i class="fas fa-laptop" style="font-size: 3rem; color: #1428A0;"></i>
+                    <p>Samsung Laptops</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Areas -->
+    <section class="areas" id="areas">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Service Areas</h2>
+            </div>
+            <p style="text-align: center; margin-bottom: 20px;">We provide expert laptop repair, computer service, and printer repair in these areas:</p>
+            <div class="areas-grid">
+                <div class="area-item">Dilshad Garden, Delhi</div>
+                <div class="area-item">Shahdara, Delhi</div>
+                <div class="area-item">Krishna Nagar, Delhi</div>
+                <div class="area-item">Seelampur, Shahdara</div>
+                <div class="area-item">Vivek Vihar, Delhi</div>
+                <div class="area-item">Jyoti Nagar, Shahdara</div>
+                <div class="area-item">Dilshad Colony, Delhi</div>
+                <div class="area-item">Jhilmil Colony, Delhi</div>
+                <div class="area-item">Surya Nagar, Ghaziabad</div>
+                <div class="area-item">Shalimar Garden, Ghaziabad</div>
+                <div class="area-item">Ramprastha Colony, Ghaziabad</div>
+                <div class="area-item">Anand Vihar, Delhi</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" id="contact">
+        <div class="container">
+            <h2>Need Computer Repair? Call Us Today!</h2>
+            <p>We offer free diagnosis, same-day service for most repairs, and competitive pricing. Our certified technicians have years of experience repairing all major laptop, computer, and printer brands.</p>
+            <a href="tel:9311551855" class="btn"><i class="fas fa-phone"></i> Call 9311551855</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>HP Service Center</h3>
+                    <p>Your trusted multi-brand laptop and printer service center in Dilshad Garden, Delhi. We specialize in out-of-warranty repairs for all major brands.</p>
+                    <p><i class="fas fa-phone"></i> 9311551855</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 358A, Pocket J & K, Dilshad Garden, Delhi, 110095</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="#">Laptop Repair Service</a></li>
+                        <li><a href="#">Computer Repair Service</a></li>
+                        <li><a href="#">Printer Repair Service</a></li>
+                        <li><a href="#">MacBook Repair Service</a></li>
+                        <li><a href="#">Virus Removal Service</a></li>
+                        <li><a href="#">Data Recovery Service</a></li>
+                        <li><a href="#">Screen Replacement</a></li>
+                        <li><a href="#">Motherboard Repair</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#brands">Brands We Repair</a></li>
+                        <li><a href="#areas">Service Areas</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="tel:9311551855">Call Now</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 HP Service Center - Laptop, Computer & Printer Repair | Dilshad Garden, Delhi. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple script for smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
